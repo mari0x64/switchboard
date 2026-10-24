@@ -1,0 +1,173 @@
+##############################################################################
+# .gitignore — AD security learning lab
+#
+# Rule of thumb: ignore anything generated, machine-specific, or secret.
+# Track anything a reader needs to reproduce the lab (scripts, README, samples).
+#
+# Verify a rule with:  git check-ignore -v <path>
+# See all ignored:     git status --ignored
+##############################################################################
+
+#############################
+# 1. Private keys & SSH
+#############################
+# Safety net only — real keys belong in %USERPROFILE%\.ssh, never in the repo.
+# Negation last keeps public keys (.pub) trackable if you ever want them.
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+id_*
+!id_*.pub
+
+*.pem
+*.key
+*.pfx
+*.p12
+*.ppk
+*.jks
+*.keystore
+*.p8
+*.der
+
+# Known-hosts / SSH client state
+known_hosts
+known_hosts.old
+config.ssh
+
+# Password manager databases
+*.kdbx
+*.kdb
+*.psafe3
+*.1pif
+
+#############################
+# 2. Secrets & credentials
+#############################
+.env
+.env.*
+*.env
+!.env.example
+
+secrets.json
+secrets.*.json
+credentials.json
+credentials.*.json
+*credentials*.local.json
+
+# Lab user files containing reusable/real passwords.
+# Commit a sanitized users.sample.json instead, and document the rename step.
+users.local.json
+users.real.json
+*.local.json
+
+# Windows credential exports
+*.rdg
+*.rdp
+
+#############################
+# 3. PowerShell-generated artifacts
+#############################
+# Transcripts (default name: PowerShell_transcript.<host>.<timestamp>.txt)
+PowerShell_transcript.*
+*transcript*.txt
+
+# Serialized objects / session configs produced during testing
+*.clixml
+*.pssc
+*.psrc
+
+# Command history (can leak usernames, hosts, and passwords you typed)
+ConsoleHost_history.txt
+
+#############################
+# 4. Lab output & generated data
+#############################
+# Keep generated results out; commit scripts that regenerate them.
+output/
+out/
+results/
+reports/generated/
+*.out
+
+# BloodHound / CrackMapExec / tool output dumps (regenerable, often huge)
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+
+# Directory listing / enumeration dumps
+*.csv
+!samples/*.csv
+
+#############################
+# 5. Virtual machines & disk images
+#############################
+# Never commit VMs or ISOs — use releases or external links instead.
+*.ova
+*.ovf
+*.vmdk
+*.vdi
+*.vhd
+*.vhdx
+*.vbox
+*.vbox-prev
+*.iso
+*.img
+*.qcow2
+Snapshots/
+snapshots/
+
+#############################
+# 6. Logs, temp, and backups
+#############################
+*.log
+*.txt.bak
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+*.pid
+*.lock
+*.crdownload
+*.partial
+
+#############################
+# 7. OS-generated files
+#############################
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+._*
+$RECYCLE.BIN/
+*.stackdump
+
+#############################
+# 8. Editors & IDEs
+#############################
+.vscode/
+.idea/
+.vs/
+*.code-workspace
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+#############################
+# 9. Misc tooling noise
+#############################
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+.history/
