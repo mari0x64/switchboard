@@ -1,6 +1,5 @@
 ##############################################################################
-# .gitignore — AD security learning lab
-#
+# .gitignore
 # Rule of thumb: ignore anything generated, machine-specific, or secret.
 # Track anything a reader needs to reproduce the lab (scripts, README, samples).
 #
