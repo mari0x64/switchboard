@@ -1,4 +1,4 @@
-# Help Desk — Network Setup and Troubleshooting Home Lab
+# Help Desk - Network Setup and Troubleshooting Home Lab
 
 ## About This Repository
 
@@ -25,7 +25,7 @@ so expect the repo to grow steadily rather than arrive finished.
 
 ---
 
-## Project 01 — Network Setup and Troubleshooting *(current)*
+## Project 01 - Network Setup and Troubleshooting *(current)*
 
 **This is the focus of the repository right now.** Everything below describes
 Project 01. Later projects are listed in the roadmap further down and will
@@ -54,8 +54,8 @@ experiment, break things, and expand their knowledge of the networking side of
 this field.
 
 The lab is built on VMware Workstation. The virtual switch lets me carve out
-segments that behave like the ones I'd meet in a real office — a client VLAN
-behind a firewall, a server segment, an isolated test segment — so that when I
+segments that behave like the ones I'd meet in a real office - a client VLAN
+behind a firewall, a server segment, an isolated test segment - so that when I
 misconfigure a route or point a client at the wrong DNS server, the failure looks
 the same as it would on real hardware. And because it's virtual, a snapshot
 restores the whole thing in under a minute.
@@ -81,7 +81,7 @@ Nothing is shared between projects except the top-level README.
 
 
 The top-level README (this file) is the index. The per-project README is the
-actual walkthrough — commands run, problems hit, how they were fixed, and what
+actual walkthrough, commands run, problems hit, how they were fixed, and what
 I would do differently next time.
 
 ---
@@ -89,7 +89,7 @@ I would do differently next time.
 ## Roadmap
 
 The topics below are the areas of help desk work I intend to cover. The order is
-a sequence, not a priority list — each project builds on the one before it, which
+a sequence, not a priority list. Each project builds on the one before it, which
 is why networking comes first.
 
 | # | Project | What it covers | Status |
@@ -106,7 +106,7 @@ is why networking comes first.
 | 10 | Backup and Recovery | Image backups, restore testing, recovering a broken system | Planned |
 | 11 | Ticket Triage and Documentation | Writing up an incident so the next person can follow it | Planned |
 
-The list will change as I go — some projects will split, some will merge, and
+The list will change as I go. some projects will split, some will merge, and
 some will turn out to be less useful than I expected. That's part of the point.
 
 ---
@@ -116,7 +116,7 @@ some will turn out to be less useful than I expected. That's part of the point.
 **Hardware troubleshooting.** You may ask why. The reason is simple: there are
 other resources that cover this topic in far greater detail and in a much more
 professional way than I could. Faulty RAM, dead motherboards, failing drives, and
-physical diagnostics need real hardware, real tools, and hands-on practice — none
+physical diagnostics need real hardware, real tools, and hands-on practice - none
 of which a virtual lab can give you. Pointing you at better material is more
 useful than a shallow imitation of it.
 
